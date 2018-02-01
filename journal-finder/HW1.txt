@@ -1,0 +1,269 @@
+Oliver Walker
+Computer Graphics Homework 1
+
+ACM Transactions on Graphics (TOG)
+
+
+
+article 1
+
+
+
+@Article{Bala:2018:3151031,
+ editor = {Bala, Kavita},
+ journal = {ACM Trans. Graph.},
+ year = {2018},
+ issn = {0730-0301},
+ volume = {37},
+ number = {1},
+ issue_date = {January 2018},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+
+
+article 2
+
+
+@article{Schreck:2015:NDG:2870647.2829948,
+ author = {Schreck, Camille and Rohmer, Damien and Hahmann, Stefanie and Cani, Marie-Paule and Jin, Shuo and Wang, Charlie C. L. and Bloch, Jean-Francis},
+ title = {Nonsmooth Developable Geometry for Interactively Animating Paper Crumpling},
+ journal = {ACM Trans. Graph.},
+ issue_date = {December 2015},
+ volume = {35},
+ number = {1},
+ month = dec,
+ year = {2015},
+ issn = {0730-0301},
+ pages = {10:1--10:18},
+ articleno = {10},
+ numpages = {18},
+ url = {http://doi.acm.org/10.1145/2829948},
+ doi = {10.1145/2829948},
+ acmid = {2829948},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Paper animation, developable surface, isometric deformation, paper crumpling, plastic deformation, sharp creases, simulation},
+} 
+
+
+IEEE Transactions on Visualization and Computer Graphics (TVCG)
+
+article 1
+
+@ARTICLE{8276573, 
+author={A. M. Reach and C. North}, 
+journal={IEEE Transactions on Visualization and Computer Graphics}, 
+title={Smooth, Efficient, and Interruptible Zooming and Panning}, 
+year={2018}, 
+volume={PP}, 
+number={99}, 
+pages={1-1}, 
+keywords={Animation;Cameras;Geometry;Measurement;Navigation;Space stations;Visualization}, 
+doi={10.1109/TVCG.2018.2800013}, 
+ISSN={1077-2626}, 
+month={},}
+
+article 2
+
+@ARTICLE{7790842, 
+author={A. G. M. Ahmed and J. Guo and D. M. Yan and J. Y. Franceschia and X. Zhang and O. Deussen}, 
+journal={IEEE Transactions on Visualization and Computer Graphics}, 
+title={A Simple Push-Pull Algorithm for Blue-Noise Sampling}, 
+year={2017}, 
+volume={23}, 
+number={12}, 
+pages={2496-2508}, 
+keywords={image sampling;mesh generation;optimisation;Delaunay triangulation;Voronoi cell;antialiasing;blue-noise sampling;improved sampling quality;nonobtuse remeshing;simple push-pull optimization algorithm;spatial constraints;stippling;Clustering algorithms;Density measurement;Harmonic analysis;Noise measurement;Optimization;Radio frequency;Blue-noise sampling;push-pull;remeshing;stippling;surface sampling}, 
+doi={10.1109/TVCG.2016.2641963}, 
+ISSN={1077-2626}, 
+month={Dec},}
+
+IEEE Computer Graphics and Applications (CG&A)
+
+article 1
+
+@ARTICLE{8255772, 
+author={N. Nilsson and T. Peck and G. Bruder and E. Hodgson and S. Serafin and E. Suma and M. Whitton and F. Steinicke}, 
+journal={IEEE Computer Graphics and Applications}, 
+title={15 Years of Research on Redirected Walking in Immersive Virtual Environments}, 
+year={2018}, 
+volume={PP}, 
+number={99}, 
+pages={1-1}, 
+keywords={Computer architecture;Legged locomotion;Object recognition;Safety;Space exploration;Virtual environments;artificial, augmented, and virtual realities;computer graphics;computing methodologies;interaction techniques;methodology and techniques;multimedia information systems information interfaces and rep;three-dimensional graphics and realism;virtual reality}, 
+doi={10.1109/MCG.2018.111125628}, 
+ISSN={0272-1716}, 
+month={},}
+
+article 2
+
+@ARTICLE{7750525, 
+author={P. Lamb and H. Croft}, 
+journal={IEEE Computer Graphics and Applications}, 
+title={Visualizing Rugby Game Styles Using Self-Organizing Maps}, 
+year={2016}, 
+volume={36}, 
+number={6}, 
+pages={11-15}, 
+keywords={self-organising feature maps;sport;strategic planning;Rugby game style visualization;SOM;high-dimensional relationships;match events;nonlinear approach;notational data;performance variables;self-organizing maps;strategic plans;team performance;Clustering algorithms;Couplings;Focusing;Games;Prototypes;Self-organizing feature maps;Time-frequency analysis;computer graphics;self-organizing maps;sports analytics;visual analysis}, 
+doi={10.1109/MCG.2016.115}, 
+ISSN={0272-1716}, 
+month={Nov},}
+
+ACM SIGGRAPH Computer Graphics (conference proceedings only, published as an ACM TOG issue)
+
+article 1
+@article{Peng:2016:DAF:2897824.2925941,
+ author = {Peng, Yifan and Fu, Qiang and Heide, Felix and Heidrich, Wolfgang},
+ title = {The Diffractive Achromat Full Spectrum Computational Imaging with Diffractive Optics},
+ journal = {ACM Trans. Graph.},
+ issue_date = {July 2016},
+ volume = {35},
+ number = {4},
+ month = jul,
+ year = {2016},
+ issn = {0730-0301},
+ pages = {31:1--31:11},
+ articleno = {31},
+ numpages = {11},
+ url = {http://doi.acm.org/10.1145/2897824.2925941},
+ doi = {10.1145/2897824.2925941},
+ acmid = {2925941},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {DOE, achromatic, computational imaging, ultrathin},
+} 
+
+article 2
+
+@article{Mukai:2016:EDS:2897824.2925905,
+ author = {Mukai, Tomohiko and Kuriyama, Shigeru},
+ title = {Efficient Dynamic Skinning with Low-rank Helper Bone Controllers},
+ journal = {ACM Trans. Graph.},
+ issue_date = {July 2016},
+ volume = {35},
+ number = {4},
+ month = jul,
+ year = {2016},
+ issn = {0730-0301},
+ pages = {36:1--36:11},
+ articleno = {36},
+ numpages = {11},
+ url = {http://doi.acm.org/10.1145/2897824.2925905},
+ doi = {10.1145/2897824.2925905},
+ acmid = {2925905},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {dynamic skinning, helper bone rig, nuclear norm optimization, state-space model},
+} 
+
+
+Computers and Graphics (C&G)
+
+article 1
+
+@article{CHENG201888,
+title = "Parametric modeling of 3D human body shape輸 survey",
+journal = "Computers & Graphics",
+volume = "71",
+pages = "88 - 100",
+year = "2018",
+issn = "0097-8493",
+doi = "https://doi.org/10.1016/j.cag.2017.11.008",
+url = "http://www.sciencedirect.com/science/article/pii/S0097849317301929",
+author = "Zhi-Quan Cheng and Yin Chen and Ralph R. Martin and Tong Wu and Zhan Song",
+keywords = "3D human body, Survey, Parametric human shape model, Avatar capture, Applications of human shape models"
+}
+
+article 2
+
+@article{FRANCU201712,
+title = "Position based simulation of solids with accurate contact handling",
+journal = "Computers & Graphics",
+volume = "69",
+pages = "12 - 23",
+year = "2017",
+issn = "0097-8493",
+doi = "https://doi.org/10.1016/j.cag.2017.09.004",
+url = "http://www.sciencedirect.com/science/article/pii/S0097849317301565",
+author = "Mihai Fr穗cu and Florica Moldoveanu",
+keywords = "Position based dynamics, Projection, Rigid body simulation, Finite element method, Frictional contact"
+}
+
+Computer Graphics Forum (CGF)
+
+article 1
+
+@article {CGF:CGF12990,
+author = {Wang, Z. and Esturo, J. Martinez and Seidel, H.-P. and Weinkauf, T.},
+title = {Stream Line烹ased Pattern Search in Flows},
+journal = {Computer Graphics Forum},
+volume = {36},
+number = {8},
+issn = {1467-8659},
+url = {http://dx.doi.org/10.1111/cgf.12990},
+doi = {10.1111/cgf.12990},
+pages = {7--18},
+keywords = {visualization, pattern search, stream lines, Categories and Subject Descriptors (according to ACM CCS): I.3.3 [Computer Graphics]: Picture/Image Generation豊ine and curve generation},
+year = {2017},
+}
+
+
+article 2
+
+@article {CGF:CGF12991,
+author = {Gao, Lin and Chen, Shu-Yu and Lai, Yu-Kun and Xia, Shihong},
+title = {Data-Driven Shape Interpolation and Morphing Editing},
+journal = {Computer Graphics Forum},
+volume = {36},
+number = {8},
+issn = {1467-8659},
+url = {http://dx.doi.org/10.1111/cgf.12991},
+doi = {10.1111/cgf.12991},
+pages = {19--31},
+keywords = {data-driven, shape interpolation, shape space, morphing editing, I.3.5 [Computer Graphics]: Computational Geometry and Object Modelling熔bject representations},
+year = {2017},
+}
+
+
+Visual Computer
+
+article 1
+
+@Article{Saini2018,
+author="Saini, Rajkumar
+and Roy, Partha Pratim
+and Dogra, Debi Prosad",
+title="A novel point-line duality feature for trajectory classification",
+journal="The Visual Computer",
+year="2018",
+month="Jan",
+day="29",
+abstract="Trajectory classification is important for understanding object movements within the surveillance area. Raw trajectories are represented by object location in form of (x,�y) coordinates. The length of trajectories varies in terms of number of points; thus, it is difficult to classify them into correct classes. The raw features extracted from trajectory do not yield satisfactory results in classification. Thus, robust features are needed that can efficiently represent trajectory sequences and help to improve the classification performance. In this paper, we present a new feature vector that is based on the concept of point-line duality (PLD) transformation, i.e., transformation of a trajectory point from its primal plane into a straight line in dual plane. Classification has been done using hidden Markov model (HMM) framework. We also propose a fusion approach combining classification results obtained from raw feature and PLD feature to improve the performance. Experiments have been carried out on raw trajectories with reduced lengths as well as adding Gaussian noise. Proposed approach has been tested on three publicly available datasets, namely T15, MIT, and CROSS. It has been found that the PLD feature outperforms existing features as well as raw feature when used in HHM-based classification. We have obtained encouraging results by feature combination at the decision level with 97, 96.75 and 99.80{\%} accuracy, respectively, on T15, MIT, and CROSS datasets.",
+issn="1432-2315",
+doi="10.1007/s00371-018-1473-2",
+url="https://doi.org/10.1007/s00371-018-1473-2"
+}
+
+
+
+article 2
+
+@Article{Averbuch-Elor2018,
+author="Averbuch-Elor, Hadar
+and Kopf, Johannes
+and Hazan, Tamir
+and Cohen-Or, Daniel",
+title="Co-segmentation for space-time co-located collections",
+journal="The Visual Computer",
+year="2018",
+month="Jan",
+day="03",
+abstract="We present a co-segmentation technique for space-time co-located image collections. These prevalent collections capture various dynamic events, usually by multiple photographers, and may contain multiple co-occurring objects which are not necessarily part of the intended foreground object, resulting in ambiguities for traditional co-segmentation techniques. Thus, to disambiguate what the common foreground object is, we introduce a weakly supervised technique, where we assume only a small seed, given in the form of a single segmented image. We take a distributed approach, where local belief models are propagated and reinforced with similar images. Our technique progressively expands the foreground and background belief models across the entire collection. The technique exploits the power of the entire set of image without building a global model, and thus successfully overcomes large variability in appearance of the common foreground object. We demonstrate that our method outperforms previous co-segmentation techniques on challenging space-time co-located collections, including dense benchmark datasets which were adapted for our novel problem setting.",
+issn="1432-2315",
+doi="10.1007/s00371-017-1467-5",
+url="https://doi.org/10.1007/s00371-017-1467-5"
+}
+
