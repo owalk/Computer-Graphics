@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+  <center>
+  <h3>This is the first programming assignment</h3>
+  <p>
+    <a href='/~owalker'>
+      Go back to home page
+    </a>
+  </p>
+  
+  <canvas id="myCanvas" width="500" height="400"
+	  style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML5 canvas tag.</canvas>
+
+  <script src="midpoint.js"></script> 
+
+  <p><button onclick="ellipse()">Draw Ellipse</button>
+    <button onclick="ellipse(false)">Clear Ellipse</button></p>
+  <p><button onclick="line()">Draw line</button>
+    <button onclick="line(false)">Remove line</button></p>
+  <p><button onclick="circle()">Draw Circle</button>
+  <button onclick="circle(false)">Remove Circle</button></p>
+  <p>
+    <button onClick="polygons()">Draw Polygon</button>
+    <button onClick="polygons(false)">Remove Polygon</button>
+  </p>
+  <p>
+    <button onClick="rectangles()">Draw Rectangle</button>
+    <button onClick="rectangles(false)">Remove Rectangle</button>
+  </p>
+  <p>
+    <button onClick="polylines()">Draw Polylines</button>
+    <button onClick="polylines(false)">Remove Polylines</button>
+  </p>
+  </center>
+  <script>
+    function circle(white){
+    var c = document.getElementById("myCanvas"); 
+    var ctx = c.getContext("2d");
+    if(white == false){
+       draw_circle(ctx, 340, 50, 40, true);
+    }
+    else {
+       draw_circle(ctx, 340, 50, 40, false);
+    }
+    }
+    ////////////////////////////////////////
+    function line(white){
+    var c = document.getElementById("myCanvas"); 
+    var ctx = c.getContext("2d");
+    if(white == false){
+    draw_line(ctx, 300, 40, 160, 80, true);
+    } else {
+    draw_line(ctx, 300, 40, 160, 80);
+    }
+    }
+    ////////////////////////////////////////
+    function ellipse(white)
+    {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    if(white == false){
+    draw_ellipse(c,ctx, true);
+    } else {
+    draw_ellipse(c,ctx, false);
+    }
+    }
+    ////////////////////////////////////////////
+    function polygons(white){
+    var c = document.getElementById("myCanvas"); 
+    var ctx = c.getContext("2d");
+    if(white == false){
+    draw_line(ctx, 270, 50, 120, 180, true);
+    draw_line(ctx, 120, 180, 150, 180, true);
+    draw_line(ctx, 150, 180, 270, 50, true);
+    } else {
+    draw_line(ctx, 270, 50, 120, 180);
+    draw_line(ctx, 120, 180, 150, 180);
+    draw_line(ctx, 150, 180, 270, 50);
+    }
+    }
+    ////////////////////////////////////////
+    function polylines(white){
+    var c = document.getElementById("myCanvas"); 
+    var ctx = c.getContext("2d");
+    if(white == false){
+    draw_line(ctx, 0, 200, 120, 300,true);
+    draw_line(ctx, 120, 300, 340, 290,true);
+    draw_line(ctx, 340, 290, 350, 250,true);
+    } else {
+    draw_line(ctx, 0, 200, 120, 300);
+    draw_line(ctx, 120, 300, 340, 290);
+    draw_line(ctx, 340, 290, 350, 250);
+    } 
+    }
+    ////////////////////////////////////////
+    function rectangles(white){
+    var c = document.getElementById("myCanvas"); 
+    var ctx = c.getContext("2d");
+    if(white == false){
+    draw_line(ctx, 270, 240, 270, 210,true);
+    draw_line(ctx, 270, 210, 150, 210,true);
+    draw_line(ctx, 150, 240, 150, 210,true);
+    draw_line(ctx, 150, 240, 270, 240,true);
+    } else {
+    draw_line(ctx, 270, 240, 270, 210);
+    draw_line(ctx, 270, 210, 150, 210);
+    draw_line(ctx, 150, 240, 150, 210);
+    draw_line(ctx, 150, 240, 270, 240);
+    } 
+    }
+  </script>
+</body>
+</html>
