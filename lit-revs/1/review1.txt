@@ -1,0 +1,42 @@
+Oliver Walker
+
+       This assignment is the first of 3 literature reviews. In this assignment I choose an article on taking in a 2 dimensional pattern and creating an algorithm to transform it into a paper pop-out of its 3 dimensional equivalent. I then found an article that this article cited on how you can take any 3 dimensional pattern and fold it into a box, and I compared how the two articles are related.
+
+     The first paper I read was titled Computational Design of Transforming Pop-up books. It poses the problem of how do develop an algorithm that takes in a 2 dimensional pattern for input then spits out a 3 dimensional pattern to be used in a pop-up book.  The paper introduces all the traditional mechanisms used for creating 3d pop-up books and then dives into explaining the mathematics behind folding designs. Later on the paper goes into details on how to apply ink to the pre transformed 2d structure so that the intended image will be displayed on the 3d transformed structure. A few additional topics are covered as well.
+
+    The second paper I read was titled Boxelization: Folding 3D Objects into Boxes. The paper focused entirely what mathematical algorithms are required to deconstruct any 3 dimensional object and fold it into an x by x box.
+
+    These two papers are related in that the first paper makes use of the mathematical concepts described in the second paper. I am sure that the authors of Transforming pop-up books used the concepts described in Boxelization as a foundation for their work. 
+
+      Boxelization almost tackles the opposite problem from Transforming pop-up books. In Boxelization the authors take any random 3 dimensional shape and fold it into a box. The other paper takes this transformation even further by smushing the box down into a flat 2 dimensional pattern and then doing the process in reverse. It’s a similar concept but certainly different. Many of the problems the authors face are talked about in both papers. 
+
+
+
+
+
+
+Citation for papers reviewed:
+Computational Design of Transforming Pop-up Books bibtex:
+@article{Xiao:2018:CDT:3151031.3156934,
+ author = {Xiao, Nan and Zhu, Zhe and Martin, Ralph R. and Xu, Kun and Lu, Jia-Ming and Hu, Shi-Min},
+ title = {Computational Design of Transforming Pop-up Books},
+ journal = {ACM Trans. Graph.},
+ issue_date = {January 2018},
+ volume = {37},
+ number = {1},
+ month = jan,
+ year = {2018},
+ issn = {0730-0301},
+ pages = {8:1--8:14},
+ articleno = {8},
+ numpages = {14},
+ url = {http://doi.acm.org/10.1145/3156934},
+ doi = {10.1145/3156934},
+ acmid = {3156934},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Paper art, mechanism design, pop-up, transforming pop-up},
+} 
+
+Citation for Boxelization, folding 3d objects into boxes
+Yahan Zhou, Shinjiro Sueda, Wojciech Matusik, and Ariel Shamir. 2014. Boxelization: folding 3D objects into boxes. ACM Trans. Graph. 33, 4, Article 71 (July 2014), 8 pages.
