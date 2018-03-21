@@ -1,0 +1,139 @@
+var canvas = document.getElementById('my_canvas'),
+    ctx = canvas.getContext('2d');
+var repeater = null;    
+var primitive = "line";
+
+r1 = document.getElementById("r1");
+r1.checked = true;
+
+var slide = document.getElementById('s1'),
+    sliderDiv = document.getElementById("sliderAmount");
+
+function set_line(){primitive = "line"}
+function set_arc(){primitive = "arc"}
+var sval = document.getElementById("s1").value;
+
+function r_buttons(){
+    sval = document.getElementById("s1").value;
+    if(document.getElementById('r3').checked) {
+	set_line();
+	fractal(sval, primitive);
+    }
+
+    if(document.getElementById('r4').checked) {
+	set_arc();
+	fractal(sval, primitive);
+    }
+    
+    if(document.getElementById('r1').checked) {
+	i =6;
+	j =7;
+	repeater = window.setInterval(function(){
+	    if(j>=7){i--;}
+	    if(j>11){j=1;}
+	    if(j<7){i++;}
+	    j++;
+	  
+	    fractal(i, primitive)
+	}, 1000);        		  			  
+    } else {
+	window.clearInterval(repeater);
+	ctx.clearRect(0, 0, 600, 410);
+    }
+	  
+    if(document.getElementById('r2').checked) {
+	fractal(sval, primitive);
+    }
+}
+
+slide.onchange = function() {
+	
+    sliderDiv.innerHTML = this.value;
+
+    r_buttons();
+}
+    
+
+
+//call my buttons function at the start.
+r_buttons();
+
+//pass in 1 to 6..
+function fractal(iters, p){					    
+    ctx.clearRect(0, 0, 600, 410);
+    drawKochCurve(20.0, 300.0, 600.0, 300.0, '#000', Math.PI/3, 10 ** iters, p);
+
+}
+
+    
+function drawLine(x1,y1,x2,y2, color)
+{
+    ctx.fillStyle = '#000';
+    ctx.strokeStyle = color;
+    
+    ctx.beginPath();
+    ctx.moveTo(x1, y1); 
+    ctx.lineTo(x2, y2);
+    ctx.lineWidth = 1;
+    ctx.stroke();
+    ctx.closePath();  
+}
+
+function drawArc(x1,y1,x2,y2, color)
+{
+    ctx.fillStyle = '#000';
+    ctx.strokeStyle = color;
+
+    ctx.beginPath();
+
+    ctx.arc(x1,y1,x2-x1.PI,Math.PI,false);
+    ctx.lineWidth = 1;
+    ctx.stroke();
+    ctx.closePath();  
+}    
+
+
+
+function drawKochCurve(x1, y1, x2, y2, color, alfa, k, primitive){
+    
+    if( ((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1)) < k) {
+	if(primitive.includes("arc")){
+	    drawArc(x1,y1,x2,y2, color);
+	} else {
+            drawLine(x1,y1,x2,y2, color);
+	}
+	
+	return;
+						     }
+
+    var xa = x1 + 1/3 * (x2 - x1),
+	ya = y1 + 1/3 * (y2 - y1),
+	
+	xb = x1 + 2/3 * (x2 - x1),
+	yb = y1 + 2/3 * (y2 - y1),
+  
+	xc = xa + (xb - xa) * Math.cos(-alfa) - (yb - ya) * Math.sin(-alfa),
+	yc = ya + (yb - ya) * Math.cos(-alfa) + (xb - xa) * Math.sin(-alfa);
+  
+    drawKochCurve(x1,y1, xa,ya, color, alfa, k);
+    drawKochCurve(xa,ya, xc,yc, color,alfa, k);
+    drawKochCurve(xc,yc, xb,yb, color, alfa, k);
+    drawKochCurve(xb,yb, x2,y2, color, alfa, k);  
+  
+}
+
+						    
+/* cool color shit
+var degK = Math.PI/180;
+var deg = 0;
+var aa = 1;
+repeating_interval_2 = setInterval(function(){
+  //ctx.clearRect(20, 210, canvas.width, canvas.height);
+  
+  drawKochCurve(20.0, 400.0, 400.0, 400.0, "rgb(" + Math.floor((Math.random()*255)) + ","+Math.floor((Math.random()*255))+","+Math.floor((Math.random()*255))+")", deg * degK, 1);
+  
+  deg += aa;
+  if (0 == deg || 60 == deg) aa *= -1;
+  if (deg == 0) ctx.clearRect(20, 210, canvas.width, canvas.height);
+
+}, 30);*/
