@@ -1,0 +1,36 @@
+Oliver Walker 
+Computer Graphics Literature Review 2
+
+	For this literature review I will be reviewing the paper Design of Virtual Reality Robot Based on Android Platform in comparison to Modeling and Calibration of Inertial and Vision Sensors. The second paper, Modeling and Calibration of Inertial and Vision Sensors is a peer reviewed paper that is referenced in the first paper. I will explain what each paper covers in some detail before I draw a comparison of the two.
+	In the paper Design of Virtual Reality Robot Based on Android Platform the authors say in their intro “the VR robot designed in this paper aims to bring a sense of immersion and improve human-computer interaction through Pan/Tilt/Zoom (PTZ) with binocular camera and Auto Speech Recognition.”
+	What The paper means when it says VR robot is a little moving robot with a binocular camera attached to a very advanced swivel head. The User of the robot can control the robot while wearing a VR headset, and when the user turns their head the robot will turn its head in the same fashion and display what it sees to the user. This essentially gives the user the eyes of the robot and greatly improves the immersion experience.
+	For the software portion of the virtual reality robot to program is written in Android programming language. It is divided into three parts: video display, speech recognition and head posture capturing. The robot includes 5 main hardware components: Arduino control module, motion module, camera module, PTZ module, and WIFI module. Throughout the article the authors skip over how the robot is assembled and focus their attention of the algorithmic design of their solutions to controlling the robot.
+
+The second paper Modeling and Calibration of Inertial and Vision Sensors was all about introducing a new mathematical method for solving a problem. More specifically the paper “is concerned with the problem of estimating the relative translation and orientation between a camera and an inertial measurement unit (IMU) that are rigidly connected.”
+In my understanding of what this paper is conveying, the authors are explaining a new way of calibrating their cameras based on readings from an inertia sensor and images of a white and black checkered pattern that the cameras are pointed at. The paper states that not only are both perspective and wide angle lenses handled by their new approach, but also the experiments indicate that the proposed algorithm is very easy to use. The common use case for this algorithm would be any sort of integration between cameras and inertia sensors.
+	
+The two papers relate to one another in that the first paper could easily use the methods described in the second paper.  I searched thoroughly in the paper Design of Virtual Reality Robot Based on Android Platform for any mention of the methods described in the paper Modeling and Calibration of Inertial and Vision Sensors and I could not find an actual instance of them saying they incorporated the method into their robot, but they could have and probably did. It must have been one of the details of the robot that they glanced over when describing it since this method would be just for calibrating one small component of the overall robot.
+
+
+Design of Virtual Reality Robot Based on Android Platform
+http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8313798
+
+bibtex citation:
+@INPROCEEDINGS{8313798, 
+author={J. Bai and X. Wang and W. Zhang and C. Zhuang and M. Pan}, 
+booktitle={2017 Fourth International Conference on Image Information Processing (ICIIP)}, 
+title={Design of virtual reality robot based on android platform}, 
+year={2017}, 
+volume={}, 
+number={}, 
+pages={1-4}, 
+keywords={Cameras;Gears;Robots;Smart phones;Speech recognition;Streaming media;Wireless fidelity;robot;rotation matrix;virtual reality;voice recognition}, 
+doi={10.1109/ICIIP.2017.8313798}, 
+ISSN={}, 
+month={Dec},}
+
+Modeling and Calibration of Inertial and Vision Sensors
+https://pdfs.semanticscholar.org/7df2/9ec2a1b718c0bec20ec63431bdbbd747f577.pdf
+Authors: Jeroen D. Hol, Thomas B. Schön, Fredrik Gustafsson
+Title: Modeling and Calibration of Inertial and Vision Sensors
+Date published: 2009-08-24
