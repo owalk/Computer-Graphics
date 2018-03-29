@@ -1,0 +1,8 @@
+Week 1 report:
+
+this week I found an example of a square on three.js and i used the code to build off of that example and then changed it
+so that it would fit into my project in the way that I want it to.
+
+I altered several aspects of the code and played with it changing different parts to fully understand how it works
+
+next week i plan to use this code to add in a bunch of custom built functionality that will make this code my own.
