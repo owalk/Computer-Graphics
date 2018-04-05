@@ -1,0 +1,29 @@
+#testslider .d3slider-rect-value {
+  fill: #006EE3;
+  stroke: none;
+}
+
+#testslider2 .d3slider-rect-value {
+  fill: black;
+  stroke: none;
+}
+
+p    {color: red;}
+body {
+    color: #cccccc;
+    font-family:Monospace;
+    font-size:13px;
+    text-align:center;
+    background-color: #a9baa7;
+    margin: 0px;
+    overflow: hidden;
+}
+#info {
+    position: absolute;
+    top: 0px; width: 100%;
+    padding: 5px;
+}
+a {
+    color: #0080ff;
+}
+

@@ -1,5 +1,3 @@
-	
-
 if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 var container, stats;
 var camera, scene, renderer;
@@ -24,7 +22,7 @@ function init() {
     light2.position.set( 0, -1, 0 );
     scene.add( light2 );
     //
-    var triangles = 5000;
+    var triangles = 5000; // number if triangles
     var geometry = new THREE.BufferGeometry();
     var positions = new Float32Array( triangles * 3 * 3 );
     var normals = new Float32Array( triangles * 3 * 3 );
@@ -165,3 +163,24 @@ function render() {
     }
     renderer.render( scene, camera );
 }
+
+// button stuff
+/*
+var rangeInput = document.getElementById("rangeinput").value;
+var buttonInput = document.getElementById("btn");
+
+if (buttonInput.addEventListener) {
+	buttonInput.addEventListener("click", testtest, false);
+}
+else if (buttonInput.attachEvent) {
+	buttonInput.attachEvent('onclick', testtest);
+}
+
+function testtest(e) {
+    if (rangeInput > 0 && rangeInput < 5) {
+        alert("First");
+    } else {
+        alert("Second");
+    }
+}
+*/

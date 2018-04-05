@@ -1,33 +1,13 @@
 <html>
   <head>
-
     <title>Comp Graphics Final</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <style>
-      p    {color: red;}
-      body {
-      color: #cccccc;
-      font-family:Monospace;
-      font-size:13px;
-      text-align:center;
-      background-color: #a9baa7;
-      margin: 0px;
-      overflow: hidden;
-      }
-      #info {
-      position: absolute;
-      top: 0px; width: 100%;
-      padding: 5px;
-      }
-      a {
-      color: #0080ff;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
 <body>
   <script src="http://threejs.org/build/three.min.js"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   
   <div id="container"></div>
   <div id="info"></div>
@@ -37,31 +17,24 @@
   <p>
     i will be adding sliders to mess with different aspects of the square
   </p>
+  <div id="slider">
+    <input type="range" id="rangeinput" min="1" max="25" value="20"  onchange="rangevalue.value=value"/>
+    <span class="highlight"></span>
+    <output id="rangevalue">20</output>
+  </div>
 		
   <script src="js/Detector.js"></script>
   <script src="js/libs/stats.min.js"></script>
   <script src="myjs.js"></script>
 
-  <!-- 
-  <script>
-    var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 1, 10000);
-    var renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
-    var geometry = new THREE.BoxGeometry(700, 700, 700, 10, 10, 10);
-    var material = new THREE.MeshBasicMaterial({color: 0xfffff, wireframe: true});
-    var cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
-    camera.position.z = 1000;        
-    function render() {
-    requestAnimationFrame(render);
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
-    renderer.render(scene, camera);
-    };
-    render();
-  </script>
-  -->
+
+  <div id="includedContent"></div>
+
+  <script> 
+    $(function(){
+    $("#includedContent").load("manual.html"); 
+    });
+  </script> 
+
 </body>
 </html>
