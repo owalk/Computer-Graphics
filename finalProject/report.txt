@@ -6,3 +6,11 @@ so that it would fit into my project in the way that I want it to.
 I altered several aspects of the code and played with it changing different parts to fully understand how it works
 
 next week i plan to use this code to add in a bunch of custom built functionality that will make this code my own.
+
+Week 2 report:
+
+This week i've planned out a bit more of the project and i have spent some time looking up how to do cool stuff in javascript.
+
+I also made the manual an imported html file through jquery. i plan on using this technique for a few more cool aspects to this project.
+
+I played around with the css a lot and I started the code for adding in all the sliders that manipulate the cube properties.
