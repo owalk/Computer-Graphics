@@ -1,3 +1,4 @@
+
 Week 1 report:
 
 this week I found an example of a square on three.js and i used the code to build off of that example and then changed it
@@ -14,3 +15,9 @@ This week i've planned out a bit more of the project and i have spent some time 
 I also made the manual an imported html file through jquery. i plan on using this technique for a few more cool aspects to this project.
 
 I played around with the css a lot and I started the code for adding in all the sliders that manipulate the cube properties.
+
+Week 3 report:
+
+this week I tweaked some more settings and got ready for more camera control settings. Tomorrow I will finish implementing all the camera contral stuff
+and finish the slider that controls how many triangles make up the cube. currently when the setting is changed, the already loaded triangles stay catched
+and i have a hard time making them dissapear.

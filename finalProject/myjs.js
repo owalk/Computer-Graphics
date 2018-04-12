@@ -22,13 +22,13 @@ function init() {
     light2.position.set( 0, -1, 0 );
     scene.add( light2 );
     //
-    var triangles = 5000; // number if triangles
+    var triangles = 10; // number if triangles
     var geometry = new THREE.BufferGeometry();
     var positions = new Float32Array( triangles * 3 * 3 );
     var normals = new Float32Array( triangles * 3 * 3 );
     var colors = new Float32Array( triangles * 3 * 3 );
 				var color = new THREE.Color();
-    var n = 600, n2 = n/2;	// triangles spread in the cube
+    var n = 900, n2 = n/2;	// triangles spread in the cube
     var d = 120, d2 = d/2;	// individual triangle size
     var pA = new THREE.Vector3();
     var pB = new THREE.Vector3();
