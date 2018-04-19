@@ -3,6 +3,8 @@ var container, stats;
 var camera, scene, renderer;
 var raycaster, mouse;
 var mesh, line;
+var controls;
+
 init();
 animate();
 function init() {
@@ -21,8 +23,10 @@ function init() {
     var light2 = new THREE.DirectionalLight( 0xffffff, 1.5 );
     light2.position.set( 0, -1, 0 );
     scene.add( light2 );
-    //
-    var triangles = 10; // number if triangles
+
+    // number if triangles
+    var triangles =  5000;
+
     var geometry = new THREE.BufferGeometry();
     var positions = new Float32Array( triangles * 3 * 3 );
     var normals = new Float32Array( triangles * 3 * 3 );
@@ -122,6 +126,8 @@ function init() {
     //
     window.addEventListener( 'resize', onWindowResize, false );
     document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+
+    controls = new THREE.OrbitControls( camera );
 }
 function onWindowResize() {
     camera.aspect = window.innerWidth / window.innerHeight;
@@ -164,23 +170,3 @@ function render() {
     renderer.render( scene, camera );
 }
 
-// button stuff
-/*
-var rangeInput = document.getElementById("rangeinput").value;
-var buttonInput = document.getElementById("btn");
-
-if (buttonInput.addEventListener) {
-	buttonInput.addEventListener("click", testtest, false);
-}
-else if (buttonInput.attachEvent) {
-	buttonInput.attachEvent('onclick', testtest);
-}
-
-function testtest(e) {
-    if (rangeInput > 0 && rangeInput < 5) {
-        alert("First");
-    } else {
-        alert("Second");
-    }
-}
-*/
