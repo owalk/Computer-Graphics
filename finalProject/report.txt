@@ -28,3 +28,8 @@ you can now adjust the camera position to any angle and zoom with your mouse.
 updated the manual to explain how to do so. make sure the cache is cleared if these changes are not seen...
 
 Slider to change number of cubes displayed is still giving me issues with how to rerender each cube/delete uneeded ones.
+
+Week 5 report:
+
+This week i have focused on getting the cube to do more things related to rendering the amount of triangles on the cube.
+I worked on implementing a slider for changing the number of triangles rendered.

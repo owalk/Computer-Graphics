@@ -127,7 +127,7 @@ function init() {
     window.addEventListener( 'resize', onWindowResize, false );
     document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 
-    controls = new THREE.OrbitControls( camera );
+    controls = new THREE.OrbitControls( camera, renderer.domElement );
 }
 function onWindowResize() {
     camera.aspect = window.innerWidth / window.innerHeight;
