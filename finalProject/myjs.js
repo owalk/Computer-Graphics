@@ -1,5 +1,4 @@
-if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
-var container, stats;
+var container;
 var camera, scene, renderer;
 var raycaster, mouse;
 var mesh, line;
@@ -10,21 +9,120 @@ animate();
 function init() {
     container = document.getElementById( 'container' );
     //
-    camera = new THREE.PerspectiveCamera( 27, window.innerWidth / window.innerHeight, 1, 3500 );
+    camera = new THREE.PerspectiveCamera( 27, window.innerWidth / window.innerHeight, 1, 8500 );
     camera.position.z = 2700;
+    camera.position.x = 0;
+    camera.position.y = 800;
     scene = new THREE.Scene();
     scene.background = new THREE.Color( 0x7e9184 );
-    scene.fog = new THREE.Fog( 0x050505, 2000, 3500 );
-    //
-    scene.add( new THREE.AmbientLight( 0x444444 ) );
-    var light1 = new THREE.DirectionalLight( 0xffffff, 0.5 );
-    light1.position.set( 1, 1, 1 );
-    scene.add( light1 );
-    var light2 = new THREE.DirectionalLight( 0xffffff, 1.5 );
-    light2.position.set( 0, -1, 0 );
-    scene.add( light2 );
+    scene.fog = new THREE.Fog( 0x050505, 2000, 6500 );
 
-    // number if triangles
+    // everywhere light setup
+    scene.add( new THREE.AmbientLight( 0x444444, 1.5 ) );
+
+    // bottom platform setup
+    var material_platform = new THREE.MeshLambertMaterial();
+    var geometry_platform = new THREE.PlaneGeometry(2000, 2000, 100, 100);
+
+    var mesh_platform = new THREE.Mesh(geometry_platform, material_platform);
+
+    // flatten mesh
+    mesh_platform.rotation.x = -90 * (Math.PI/180);
+
+    // move mesh below object
+    mesh_platform.position.y = -800;
+    
+    scene.add(mesh_platform);
+
+    // put a bunch of triangles into a cube
+    triangle_stuff();
+    
+
+    //overhead light setup
+    var light = new THREE.SpotLight( 0xffffff, 5.0, 10000);
+    light.position.y = 3500;
+    light.target = mesh;
+    
+
+    raycaster = new THREE.Raycaster();
+    mouse = new THREE.Vector2();
+    var geometry = new THREE.BufferGeometry();
+    geometry.addAttribute( 'position', new THREE.BufferAttribute( new Float32Array( 4 * 3 ), 3 ) );
+    var material = new THREE.LineBasicMaterial( { color: 0xffffff, linewidth: 2, transparent: true } );
+    line = new THREE.Line( geometry, material );
+    scene.add( line );
+    //
+    renderer = new THREE.WebGLRenderer();
+    renderer.setPixelRatio( window.devicePixelRatio );
+    renderer.setSize( (window.innerWidth*3)/4, (window.innerHeight*3)/4);
+    container.appendChild( renderer.domElement );
+
+    // shadow
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFShadowMap;
+
+    light.castShadow = true;
+    light.shadow.bias = 0.001;
+    light.shadow = new THREE.LightShadow( new THREE.PerspectiveCamera( 100, 1, 500, 5000 ) );
+
+    light.shadow.mapSize.width = 2048 * 2;
+    light.shadow.mapSize.height = 2048 * 2;
+    
+    mesh.castShadow = true;
+    mesh_platform.receiveShadow = true;
+
+    //add light to scene with shadow casting on the two mesh objects
+    scene.add( light );
+
+    //
+    window.addEventListener( 'resize', onWindowResize, false );
+    document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+
+    controls = new THREE.OrbitControls( camera, renderer.domElement );
+}
+function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize( window.innerWidth/2, window.innerHeight/2 );
+}
+function onDocumentMouseMove( event ) {
+    event.preventDefault();
+
+    mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+    mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+}
+//
+function animate() {
+    requestAnimationFrame( animate );
+    render();
+    stats.update();
+}
+function render() {
+    var time = Date.now() * 0.001;
+    mesh.rotation.x = time * 0.15;
+    mesh.rotation.y = time * 0.25;
+    raycaster.setFromCamera( mouse, camera );
+    var intersects = raycaster.intersectObject( mesh );
+    if ( intersects.length > 0 ) {
+	var intersect = intersects[ 0 ];
+	var face = intersect.face;
+	var linePosition = line.geometry.attributes.position;
+	var meshPosition = mesh.geometry.attributes.position;
+	linePosition.copyAt( 0, meshPosition, face.a );
+	linePosition.copyAt( 1, meshPosition, face.b );
+	linePosition.copyAt( 2, meshPosition, face.c );
+	linePosition.copyAt( 3, meshPosition, face.a );
+	mesh.updateMatrix();
+	line.geometry.applyMatrix( mesh.matrix );
+	line.visible = true;
+    } else {
+	line.visible = false;
+    }
+    renderer.render( scene, camera );
+}
+
+function triangle_stuff(){
+     // number if triangles
     var triangles =  5000;
 
     var geometry = new THREE.BufferGeometry();
@@ -107,66 +205,4 @@ function init() {
     } );
     mesh = new THREE.Mesh( geometry, material );
     scene.add( mesh );
-    //
-				raycaster = new THREE.Raycaster();
-    mouse = new THREE.Vector2();
-    var geometry = new THREE.BufferGeometry();
-    geometry.addAttribute( 'position', new THREE.BufferAttribute( new Float32Array( 4 * 3 ), 3 ) );
-    var material = new THREE.LineBasicMaterial( { color: 0xffffff, linewidth: 2, transparent: true } );
-    line = new THREE.Line( geometry, material );
-    scene.add( line );
-    //
-    renderer = new THREE.WebGLRenderer();
-    renderer.setPixelRatio( window.devicePixelRatio );
-    renderer.setSize( window.innerWidth/2, window.innerHeight/2);
-    container.appendChild( renderer.domElement );
-    //
-    stats = new Stats();
-    container.appendChild( stats.dom );
-    //
-    window.addEventListener( 'resize', onWindowResize, false );
-    document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-
-    controls = new THREE.OrbitControls( camera, renderer.domElement );
 }
-function onWindowResize() {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize( window.innerWidth/2, window.innerHeight/2 );
-}
-function onDocumentMouseMove( event ) {
-    event.preventDefault();
-
-    mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
-    mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
-}
-//
-function animate() {
-    requestAnimationFrame( animate );
-    render();
-    stats.update();
-}
-function render() {
-    var time = Date.now() * 0.001;
-    mesh.rotation.x = time * 0.15;
-    mesh.rotation.y = time * 0.25;
-    raycaster.setFromCamera( mouse, camera );
-    var intersects = raycaster.intersectObject( mesh );
-    if ( intersects.length > 0 ) {
-	var intersect = intersects[ 0 ];
-	var face = intersect.face;
-	var linePosition = line.geometry.attributes.position;
-	var meshPosition = mesh.geometry.attributes.position;
-	linePosition.copyAt( 0, meshPosition, face.a );
-	linePosition.copyAt( 1, meshPosition, face.b );
-	linePosition.copyAt( 2, meshPosition, face.c );
-	linePosition.copyAt( 3, meshPosition, face.a );
-	mesh.updateMatrix();
-	line.geometry.applyMatrix( mesh.matrix );
-	line.visible = true;
-    } else {
-	line.visible = false;
-    }
-    renderer.render( scene, camera );
-}
-

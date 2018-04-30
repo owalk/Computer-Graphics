@@ -31,5 +31,10 @@ Slider to change number of cubes displayed is still giving me issues with how to
 
 Week 5 report:
 
-This week i have focused on getting the cube to do more things related to rendering the amount of triangles on the cube.
-I worked on implementing a slider for changing the number of triangles rendered.
+This week I added another mesh object underneath my first mesh object. I will try to cast shadows on it next week.
+
+Final Submission report:
+
+The last changes I have made are I changed my light sources and added shadows. There is now a dull ambient light everywhere in the scene and a threejs spotlight cast light onto the main mesh from 3500 y units above it. the light, and both the mesh's have been changed to be able to cast and receive shadows.
+
+I also altered the sizing of the canvas and the scence aspect ratio to display properly. and I also changed the main camera's starting position so you have a better view of the scene from the start.
